@@ -132,7 +132,9 @@ nav a.active:after{
 }
 .lbl{
   position:absolute;
-  transform:translateY(-50%);
+  /* hang the type from the circle's vertical mid-line:
+     the `top` values sit on that mid-point and the cap height
+     rests just beneath it, so every title aligns the same way */
   max-width:8.6%;
 }
 .lbl h2{
