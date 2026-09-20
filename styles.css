@@ -36,23 +36,19 @@ a{color:inherit;text-decoration:none}
   position:relative;
   z-index:10;
 }
-/* fine grey-and-orange rule line under the header */
+/* amber rule line under the header nav (per approved design) */
 .site-header:after{
   content:"";
   position:absolute;
   left:0;right:0;bottom:0;
-  height:5px;
-  background:
-    linear-gradient(90deg,
-      rgba(232,150,64,.8) 0,
-      rgba(232,150,64,0) 18%,
-      rgba(232,150,64,0) 82%,
-      rgba(232,150,64,.8) 100%),
-    linear-gradient(180deg,
-      rgba(220,222,226,1) 0,
-      rgba(188,190,194,1) 55%,
-      rgba(120,122,126,1) 100%);
-  box-shadow:0 0 8px rgba(210,212,216,.35);
+  height:2px;
+  background:linear-gradient(90deg,
+    rgba(231,164,59,.85) 0,
+    rgba(231,164,59,.3) 22%,
+    rgba(231,164,59,.22) 50%,
+    rgba(231,164,59,.3) 78%,
+    rgba(231,164,59,.85) 100%);
+  box-shadow:0 0 8px rgba(231,164,59,.3);
   z-index:11;
 }
 .brand{display:flex;align-items:center;height:100%}
@@ -114,6 +110,16 @@ nav a.active:after{
   padding:0 0 44px;
   background:#000;
 }
+/* thin dark-grey divider where the features meet the hero */
+.platform:before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:1px;
+  background:rgba(84,85,88,.75);
+  z-index:2;
+  pointer-events:none;
+}
 .band{
   position:relative;
   width:100%;
@@ -132,9 +138,13 @@ nav a.active:after{
 }
 .lbl{
   position:absolute;
-  /* hang the type from the circle's vertical mid-line:
-     the `top` values sit on that mid-point and the cap height
-     rests just beneath it, so every title aligns the same way */
+  /* one shared rule: each block anchored to its icon centreline
+     via --icon-x/--icon-y, offset a fixed amount to the right,
+     and vertically centred (so KINEPLEX rides higher with its
+     subtitle beneath, single titles sit on the line) */
+  left:calc(var(--icon-x) + 4.6%);
+  top:var(--icon-y);
+  transform:translateY(-50%);
   max-width:8.6%;
 }
 .lbl h2{
