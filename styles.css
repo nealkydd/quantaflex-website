@@ -92,7 +92,7 @@ nav a.active:after{
 /* ---------- FEATURE GRID ---------- */
 .platform{
   position:relative;
-  padding:44px 0;
+  padding:0 0 44px;
   background:#000;
 }
 .band{
@@ -100,6 +100,20 @@ nav a.active:after{
   width:100%;
   margin:0 auto;
   line-height:0;
+}
+/* CSS divider hairlines over the band */
+.dividers{position:absolute;inset:0;pointer-events:none}
+.vd{
+  position:absolute;
+  top:14%;bottom:26%;
+  width:1px;
+  background:linear-gradient(transparent,rgba(230,175,110,.16) 16%,rgba(230,175,110,.16) 84%,transparent);
+}
+.hd{
+  position:absolute;
+  left:7%;right:7%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(230,175,110,.14) 10%,rgba(230,175,110,.14) 90%,transparent);
 }
 .band-img{
   display:block;
