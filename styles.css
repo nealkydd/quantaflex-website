@@ -36,6 +36,23 @@ a{color:inherit;text-decoration:none}
   position:relative;
   z-index:10;
 }
+/* fine grey-and-orange rule line under the header */
+.site-header:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:2px;
+  background:
+    linear-gradient(90deg,
+      rgba(228,150,66,.55) 0,
+      rgba(228,150,66,0) 16%,
+      rgba(228,150,66,0) 84%,
+      rgba(228,150,66,.55) 100%),
+    linear-gradient(180deg,
+      rgba(198,200,204,.82),
+      rgba(150,152,156,.55));
+  z-index:11;
+}
 .brand{display:flex;align-items:center;height:100%}
 .brand img{display:block;height:64px;width:auto;object-fit:contain}
 nav{display:flex;align-items:center;gap:56px;height:100%}
@@ -100,20 +117,6 @@ nav a.active:after{
   width:100%;
   margin:0 auto;
   line-height:0;
-}
-/* CSS divider hairlines over the band */
-.dividers{position:absolute;inset:0;pointer-events:none}
-.vd{
-  position:absolute;
-  top:14%;bottom:26%;
-  width:1px;
-  background:linear-gradient(transparent,rgba(230,175,110,.16) 16%,rgba(230,175,110,.16) 84%,transparent);
-}
-.hd{
-  position:absolute;
-  left:7%;right:7%;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(230,175,110,.14) 10%,rgba(230,175,110,.14) 90%,transparent);
 }
 .band-img{
   display:block;
