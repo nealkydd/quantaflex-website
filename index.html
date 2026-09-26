@@ -94,12 +94,30 @@
     /* Move the amber active-nav highlight to the tab you select */
     (function () {
       var links = document.querySelectorAll('nav a');
+      var activeByHash = {
+        "#platform": "/#platform",
+        "#about": "/#about",
+        "#contact": "/#contact"
+      };
+
+      function setActive(href) {
+        links.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === href);
+        });
+      }
+
+      function syncActiveLink() {
+        setActive(activeByHash[window.location.hash] || "/");
+      }
+
       links.forEach(function (link) {
         link.addEventListener('click', function () {
-          links.forEach(function (l) { l.classList.remove('active'); });
-          link.classList.add('active');
+          setActive(link.getAttribute("href"));
         });
       });
+
+      window.addEventListener("hashchange", syncActiveLink);
+      syncActiveLink();
     })();
   </script>
 </body>
