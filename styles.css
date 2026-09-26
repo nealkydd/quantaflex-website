@@ -227,6 +227,30 @@ nav .nav-preview:after{
   cursor:pointer;
   outline:none;
 }
+.lbl:before{
+  content:"";
+  position:absolute;
+  left:28.3%;
+  top:50%;
+  width:35%;
+  aspect-ratio:1;
+  transform:translate(-50%,-50%) scale(.9);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,197,105,.13) 0,rgba(231,164,59,.07) 46%,transparent 72%);
+  filter:blur(3px);
+  opacity:0;
+  transition:opacity .16s ease,transform .16s ease;
+  pointer-events:none;
+}
+.lbl:hover:before,
+.lbl:focus-visible:before{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1.08);
+}
+.lbl:active:before{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(.98);
+}
 .lbl h2{
   margin:0;
   color:var(--feature-title);
