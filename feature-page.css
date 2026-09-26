@@ -28,7 +28,11 @@
   background-repeat:no-repeat;
 }
 .kineplex-page .feature-stage{
-  background-image:url("/assets/kineplex-design-reference.png");
+  height:auto;
+  aspect-ratio:3 / 1;
+  background-image:url("/assets/kineplex-header.png");
+  background-position:center;
+  background-size:100% 100%;
 }
 .flexcam-page .feature-stage{
   height:auto;
@@ -287,6 +291,8 @@
     left:-43%;
     width:145%;
   }
+  .kineplex-page .product-visual{aspect-ratio:2}
+  .kineplex-page .product-visual img{top:-6%;left:-70%;width:170%}
   .flexcam-page .product-visual{aspect-ratio:2}
   .flexcam-page .product-visual img{top:-6%;left:0;width:170%}
   .capability-strip{
@@ -315,6 +321,8 @@
     aspect-ratio:1.2;
   }
   .product-visual img{top:-7%;left:-41%;width:148%}
+  .kineplex-page .product-visual{aspect-ratio:2}
+  .kineplex-page .product-visual img{top:-6%;left:-70%;width:170%}
   .flexcam-page .product-visual{aspect-ratio:2}
   .flexcam-page .product-visual img{top:-6%;left:0;width:170%}
   .capability-strip{grid-template-columns:1fr;padding:10px 20px}
