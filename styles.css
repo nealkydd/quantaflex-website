@@ -75,11 +75,12 @@ nav > a.active:after,
   background:linear-gradient(90deg,transparent,var(--orange) 18%,var(--orange) 82%,transparent);
   box-shadow:0 0 12px rgba(231,164,59,.55);
 }
-nav.features-menu-open > a.active:after{opacity:0}
-nav.features-menu-open .features-trigger{
+nav.nav-previewing > a.active:not(.nav-preview):after,
+nav.nav-previewing .features-trigger.active:not(.nav-preview):after{opacity:0}
+nav .nav-preview{
   color:#e4e5e6;
 }
-nav.features-menu-open .features-trigger:after{
+nav .nav-preview:after{
   content:"";
   position:absolute;left:2px;right:2px;bottom:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--orange) 18%,var(--orange) 82%,transparent);
@@ -214,10 +215,17 @@ nav.features-menu-open .features-trigger:after{
      via --icon-x/--icon-y, offset a fixed amount to the right,
      and vertically centred (so KINEPLEX rides higher with its
      subtitle beneath, single titles sit on the line) */
-  left:calc(var(--icon-x) + 4.6%);
+  left:calc(var(--icon-x) - 5.2%);
   top:var(--icon-y);
   transform:translateY(-50%);
-  max-width:8.6%;
+  width:18.4%;
+  min-height:22%;
+  padding-left:9.8%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  outline:none;
 }
 .lbl h2{
   margin:0;
@@ -233,6 +241,15 @@ nav.features-menu-open .features-trigger:after{
   font-size:clamp(9px,.72vw,11.5px);
   font-weight:400;
 }
+.lbl h2,
+.lbl p{transition:color .16s ease,text-shadow .16s ease}
+.lbl:hover h2,
+.lbl:focus-visible h2{
+  color:#c3c4c5;
+  text-shadow:0 0 12px rgba(231,164,59,.12);
+}
+.lbl:hover p,
+.lbl:focus-visible p{color:#929496}
 
 /* ---------- DOWNLOAD BAND ---------- */
 .download-band{

@@ -10,6 +10,23 @@
     "#about": "/#about"
   };
 
+  function previewNavItem(item) {
+    links.forEach(function (link) {
+      link.classList.remove("nav-preview");
+    });
+    featuresTrigger.classList.remove("nav-preview");
+    item.classList.add("nav-preview");
+    primaryNav.classList.add("nav-previewing");
+  }
+
+  function clearNavPreview() {
+    links.forEach(function (link) {
+      link.classList.remove("nav-preview");
+    });
+    featuresTrigger.classList.remove("nav-preview");
+    primaryNav.classList.remove("nav-previewing");
+  }
+
   function setActive(href) {
     links.forEach(function (link) {
       link.classList.toggle("active", link.getAttribute("href") === href);
@@ -28,6 +45,7 @@
   }
 
   function openFeatures() {
+    previewNavItem(featuresTrigger);
     primaryNav.classList.add("features-menu-open");
     featuresNav.classList.add("is-open");
     featuresTrigger.setAttribute("aria-expanded", "true");
@@ -38,9 +56,18 @@
     primaryNav.classList.remove("features-menu-open");
     featuresNav.classList.remove("is-open");
     featuresTrigger.setAttribute("aria-expanded", "false");
+    clearNavPreview();
   }
 
   links.forEach(function (link) {
+    link.addEventListener("mouseenter", function () {
+      previewNavItem(link);
+    });
+    link.addEventListener("mouseleave", clearNavPreview);
+    link.addEventListener("focus", function () {
+      previewNavItem(link);
+    });
+    link.addEventListener("blur", clearNavPreview);
     link.addEventListener('click', function () {
       setActive(link.getAttribute("href"));
       closeFeatures(false);
