@@ -208,19 +208,103 @@ nav a.active:after{
 footer{
   width:100%;
   margin:0 auto;
-  min-height:78px;
-  padding:20px 40px;
+  min-height:70px;
+  padding:18px 40px;
   display:flex;align-items:center;justify-content:space-between;
-  color:var(--small);
+  color:#767676;
+  font-size:8pt;
+  line-height:1em;
+  letter-spacing:.04em;
+}
+.footer-links{display:flex;align-items:center;gap:18px}
+.footer-links a{transition:.18s ease}
+.footer-links a:hover{color:#a6a6a6}
+
+/* ---------- LEGAL PAGES ---------- */
+.legal-page .page-shell{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.privacy-top,
+.privacy-main{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+}
+.privacy-top{
+  padding:30px 40px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.q-mark{
+  width:42px;
+  height:54px;
+  overflow:hidden;
+  display:block;
+}
+.q-mark img{
+  height:54px;
+  width:auto;
+  max-width:none;
+  display:block;
+}
+.legal-home{
+  color:#8f9294;
+  font-size:11px;
+  letter-spacing:.16em;
+  font-weight:500;
+}
+.legal-home:hover{color:#d3d4d5}
+.privacy-main{
+  flex:1;
+  padding:62px 40px 84px;
+}
+.privacy-main h1{
+  margin:0;
+  color:#b5b5b5;
+  font-size:clamp(38px,5vw,56px);
+  line-height:1.05;
+  font-weight:450;
+  letter-spacing:-.035em;
+}
+.updated{
+  margin:14px 0 46px;
+  color:#5e5e5e;
   font-size:12px;
 }
-.footer-links{display:flex;align-items:center;gap:22px}
-.footer-links a{transition:.18s ease}
-.footer-links a:not(.social):hover{color:#c4c7c8}
-.social-sep{width:1px;height:20px;background:#2a2d2e;margin:0 4px}
-.social{display:flex;align-items:center;color:#a7abac}
-.social svg{width:17px;height:17px;display:block}
-.social:hover{color:#e7e8e9}
+.policy-section{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:32px;
+  padding:22px 0;
+  border-top:1px solid #17191a;
+}
+.policy-section h2{
+  margin:0;
+  color:#969696;
+  font-size:13px;
+  line-height:1.5;
+  font-weight:500;
+}
+.policy-section p{
+  margin:0 0 10px;
+  color:#757575;
+  font-size:14px;
+  line-height:1.68;
+}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section a{
+  color:#a8a8a8;
+  text-decoration:underline;
+  text-decoration-color:#343638;
+  text-underline-offset:3px;
+}
+.policy-section a:hover{
+  color:#d0d0d0;
+  text-decoration-color:#6f7375;
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:1200px){
@@ -242,4 +326,16 @@ footer{
   .download-actions{flex-direction:column;align-items:center;gap:12px}
   footer{flex-direction:column;gap:16px;align-items:flex-start}
   .footer-links{flex-wrap:wrap;gap:14px}
+}
+@media (max-width:700px){
+  .privacy-top{
+    padding:22px 22px 0;
+  }
+  .privacy-main{
+    padding:48px 22px 62px;
+  }
+  .policy-section{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
 }
