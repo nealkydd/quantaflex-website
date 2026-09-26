@@ -295,6 +295,15 @@ footer{
 }
 .policy-section p:last-child{margin-bottom:0}
 .privacy-policy .policy-section p{font-size:16px}
+.policy-list{
+  margin:0 0 18px;
+  padding-left:20px;
+  color:#757575;
+  font-size:16px;
+  line-height:1.68;
+}
+.policy-list li{margin-bottom:10px}
+.policy-list strong{color:#969696;font-weight:500}
 .policy-section a{
   color:#a8a8a8;
   text-decoration:underline;
