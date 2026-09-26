@@ -31,7 +31,11 @@
   background-image:url("/assets/kineplex-design-reference.png");
 }
 .flexcam-page .feature-stage{
-  background-image:url("/assets/flexcam-design-reference.png");
+  height:auto;
+  aspect-ratio:3 / 1;
+  background-image:url("/assets/flexcam-header.png");
+  background-position:center;
+  background-size:100% 100%;
 }
 .kineplex-page .feature-stage:before,
 .flexcam-page .feature-stage:before{
@@ -264,6 +268,7 @@
   .kineplex-page .feature-stage,
   .flexcam-page .feature-stage{
     height:auto;
+    aspect-ratio:auto;
     min-height:0;
     padding:54px 28px 0;
     background:#050606;
@@ -309,7 +314,8 @@
     left:-43%;
     width:145%;
   }
-  .flexcam-page .product-visual img{left:-2%}
+  .flexcam-page .product-visual{aspect-ratio:2}
+  .flexcam-page .product-visual img{top:-6%;left:0;width:170%}
   .capability-strip{
     grid-template-columns:repeat(2,1fr);
     padding:20px 28px;
@@ -336,7 +342,8 @@
     aspect-ratio:1.2;
   }
   .product-visual img{top:-7%;left:-41%;width:148%}
-  .flexcam-page .product-visual img{left:-2%}
+  .flexcam-page .product-visual{aspect-ratio:2}
+  .flexcam-page .product-visual img{top:-6%;left:0;width:170%}
   .capability-strip{grid-template-columns:1fr;padding:10px 20px}
   .capability,
   .capability:first-child,
