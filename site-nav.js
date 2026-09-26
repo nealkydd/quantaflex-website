@@ -3,6 +3,7 @@
   var links = document.querySelectorAll('nav > a');
   var featuresNav = document.querySelector('.features-nav');
   var featuresTrigger = document.querySelector('.features-trigger');
+  var primaryNav = featuresNav.parentElement;
   var featuresMenuLinks = document.querySelectorAll('.features-menu a');
   var hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
   var activeByHash = {
@@ -27,12 +28,14 @@
   }
 
   function openFeatures() {
+    primaryNav.classList.add("features-menu-open");
     featuresNav.classList.add("is-open");
     featuresTrigger.setAttribute("aria-expanded", "true");
   }
 
   function closeFeatures(returnFocus) {
     if (returnFocus) featuresTrigger.focus();
+    primaryNav.classList.remove("features-menu-open");
     featuresNav.classList.remove("is-open");
     featuresTrigger.setAttribute("aria-expanded", "false");
   }

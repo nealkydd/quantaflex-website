@@ -75,6 +75,16 @@ nav > a.active:after,
   background:linear-gradient(90deg,transparent,var(--orange) 18%,var(--orange) 82%,transparent);
   box-shadow:0 0 12px rgba(231,164,59,.55);
 }
+nav.features-menu-open > a.active:after{opacity:0}
+nav.features-menu-open .features-trigger{
+  color:#e4e5e6;
+}
+nav.features-menu-open .features-trigger:after{
+  content:"";
+  position:absolute;left:2px;right:2px;bottom:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--orange) 18%,var(--orange) 82%,transparent);
+  box-shadow:0 0 12px rgba(231,164,59,.55);
+}
 .features-nav{
   position:relative;
   display:flex;
