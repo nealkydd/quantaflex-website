@@ -470,3 +470,4 @@ footer{
 @media (max-width:350px){
   .nav-home{display:none}
 }
+.policy-list code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:#a8a8a8;background:#141414;border:1px solid #262626;border-radius:4px;padding:0 4px}
