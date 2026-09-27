@@ -244,6 +244,31 @@ nav .nav-preview:after{
   transform:translate(-50%,-50%) scale(.98);
 }
 
+.what-is{
+  background:#020303;
+  border-top:1px solid #222425;
+  border-bottom:1px solid #222425;
+}
+.what-is-inner{
+  max-width:960px;
+  margin:0 auto;
+  padding:66px 54px 72px;
+}
+.what-is h2{
+  margin:0;
+  color:#a8aaab;
+  font-size:25px;
+  line-height:1.25;
+  letter-spacing:0;
+  font-weight:500;
+}
+.what-is p{
+  margin:20px 0 0;
+  color:#7f8183;
+  font-size:16px;
+  line-height:1.72;
+}
+
 /* ---------- DOWNLOAD BAND ---------- */
 .download-band{
   width:100%;
@@ -537,6 +562,9 @@ footer{
   .hero-copy{width:100%}
   .hero h1{font-size:30px}
   .wide-break{display:none}
+  .what-is-inner{padding:48px 24px 54px}
+  .what-is h2{font-size:23px}
+  .what-is p{font-size:15px}
   .download-band{padding:32px 16px 36px}
   .download-actions{flex-direction:column;align-items:center;gap:12px}
   footer{flex-direction:column;gap:16px;align-items:flex-start}
