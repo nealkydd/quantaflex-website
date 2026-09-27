@@ -204,35 +204,27 @@ nav .nav-preview:after{
   width:100%;
   height:auto;
 }
-.band-labels{
+.band-links{
   position:absolute;
   inset:0;
-  line-height:normal;
 }
-.lbl{
+.feature-hotspot{
   position:absolute;
-  /* one shared rule: each block anchored to its icon centreline
-     via --icon-x/--icon-y, offset a fixed amount to the right,
-     and vertically centred (so KINEPLEX rides higher with its
-     subtitle beneath, single titles sit on the line) */
-  left:calc(var(--icon-x) - 5.2%);
+  left:var(--icon-x);
   top:var(--icon-y);
-  transform:translateY(-50%);
-  width:18.4%;
-  min-height:22%;
-  padding-left:9.8%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  width:9.5%;
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
   cursor:pointer;
   outline:none;
 }
-.lbl:before{
+.feature-hotspot:before{
   content:"";
   position:absolute;
-  left:28.3%;
+  left:50%;
   top:50%;
-  width:35%;
+  width:100%;
   aspect-ratio:1;
   transform:translate(-50%,-50%) scale(.9);
   border-radius:50%;
@@ -242,38 +234,15 @@ nav .nav-preview:after{
   transition:opacity .16s ease,transform .16s ease;
   pointer-events:none;
 }
-.lbl:hover:before,
-.lbl:focus-visible:before{
+.feature-hotspot:hover:before,
+.feature-hotspot:focus-visible:before{
   opacity:1;
   transform:translate(-50%,-50%) scale(1.08);
 }
-.lbl:active:before{
+.feature-hotspot:active:before{
   opacity:1;
   transform:translate(-50%,-50%) scale(.98);
 }
-.lbl h2{
-  margin:0;
-  color:var(--feature-title);
-  font-size:clamp(12px,1.02vw,15.5px);
-  line-height:1.16;
-  font-weight:450;
-  letter-spacing:-.01em;
-}
-.lbl p{
-  margin:.35em 0 0;
-  color:var(--small);
-  font-size:clamp(9px,.72vw,11.5px);
-  font-weight:400;
-}
-.lbl h2,
-.lbl p{transition:color .16s ease,text-shadow .16s ease}
-.lbl:hover h2,
-.lbl:focus-visible h2{
-  color:#c3c4c5;
-  text-shadow:0 0 12px rgba(231,164,59,.12);
-}
-.lbl:hover p,
-.lbl:focus-visible p{color:#929496}
 
 /* ---------- DOWNLOAD BAND ---------- */
 .download-band{
@@ -448,8 +417,6 @@ footer{
   .hero-copy{width:100%}
   .hero h1{font-size:30px}
   .wide-break{display:none}
-  .lbl h2{font-size:12px}
-  .lbl p{font-size:10px}
   .download-band{padding:32px 16px 36px}
   .download-actions{flex-direction:column;align-items:center;gap:12px}
   footer{flex-direction:column;gap:16px;align-items:flex-start}
