@@ -6,9 +6,6 @@
   var primaryNav = featuresNav.parentElement;
   var featuresMenuLinks = document.querySelectorAll('.features-menu a');
   var hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
-  var activeByHash = {
-    "#about": "/#about"
-  };
 
   function previewNavItem(item) {
     links.forEach(function (link) {
@@ -37,8 +34,9 @@
   function syncActiveLink() {
     var featurePath = window.location.pathname.replace(/\/$/, "");
     var featureIsActive = featurePath.indexOf("/features/") === 0;
+    var activePage = featurePath === "/about.html" ? "/about.html" : "/";
 
-    setActive(featureIsActive ? "features" : (activeByHash[window.location.hash] || "/"));
+    setActive(featureIsActive ? "features" : activePage);
     featuresMenuLinks.forEach(function (link) {
       link.classList.toggle("active", link.getAttribute("href") === featurePath);
     });
