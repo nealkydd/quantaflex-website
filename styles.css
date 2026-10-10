@@ -599,3 +599,30 @@ footer{
   .nav-home{display:none}
 }
 .policy-list code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:#a8a8a8;background:#141414;border:1px solid #262626;border-radius:4px;padding:0 4px}
+
+/* Downloads and bundle information */
+.bundle-summary a,.downloads-link{color:#e7a43b;text-decoration:underline;text-underline-offset:4px}
+.downloads-main{max-width:1100px;margin:0 auto;padding:0 48px 56px;color:#b6b9bc}
+.downloads-intro{padding:80px 0 48px;max-width:900px}
+.downloads-intro h1{margin:0;color:#e2e4e5;font-size:clamp(36px,5vw,60px);font-weight:450;line-height:1.12;letter-spacing:-.025em}
+.downloads-main p,.activation-steps,.sponsor-tiers{font-size:16px;line-height:1.75}
+.downloads-main .downloads-lead{font-size:24px;color:#d5d7d9;margin-bottom:12px}
+.licence-panel{margin-top:32px;padding:25px 28px;background:linear-gradient(135deg,#151719,#080a0c);border:1px solid #34383b;border-left:2px solid var(--orange);border-radius:8px}
+.licence-panel>strong{font-size:22px;color:#eceeef;font-weight:500}
+.downloads-section{padding:38px 0;border-top:1px solid #303437}
+.downloads-section h2{margin:0 0 16px;color:#d9dcde;font-size:27px;font-weight:500}
+.downloads-section>p{max-width:840px}
+.modules-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+.module-card{display:block;padding:24px;background:linear-gradient(150deg,#111416,#07090b);border:1px solid #30373b;border-radius:10px}
+.module-card h3{font-size:19px;font-weight:500;color:#e1e3e5;margin:0 0 12px}
+.module-card p{font-size:15px;margin:0 0 20px}
+.module-card span{font-size:13px;color:var(--orange)}
+.module-card:hover{border-color:#ad7930}
+.downloads-main a:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+.downloads-main .download-actions{justify-content:flex-start;margin-top:28px}
+.downloads-main .dl-copy small{color:#adb0b3}
+.status-note{color:var(--orange)}
+.activation-steps,.sponsor-tiers{padding-left:24px}
+.activation-steps li,.sponsor-tiers li{padding:6px 0}
+@media(max-width:1000px){.site-header nav{gap:24px}.modules-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.site-header{height:auto;min-height:104px;flex-direction:column;padding:12px 16px 0;gap:8px}.brand img{height:42px}.site-header nav{height:38px;gap:22px}.downloads-main{padding:0 22px 32px}.downloads-intro{padding:48px 0 32px}.modules-grid{grid-template-columns:1fr}.downloads-section{padding:30px 0}.downloads-main .download-actions{align-items:flex-start}.licence-panel{padding:22px}.site-header .features-menu{right:50%;transform:translate(50%,-4px)}.site-header .features-nav.is-open .features-menu{transform:translate(50%,0)}}

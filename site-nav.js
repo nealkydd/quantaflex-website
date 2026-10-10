@@ -3,6 +3,7 @@
   var links = document.querySelectorAll('nav > a');
   var featuresNav = document.querySelector('.features-nav');
   var featuresTrigger = document.querySelector('.features-trigger');
+  if (!featuresNav || !featuresTrigger) return;
   var primaryNav = featuresNav.parentElement;
   var featuresMenuLinks = document.querySelectorAll('.features-menu a');
   var hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -34,7 +35,7 @@
   function syncActiveLink() {
     var featurePath = window.location.pathname.replace(/\/$/, "");
     var featureIsActive = featurePath.indexOf("/features/") === 0;
-    var activePage = featurePath === "/about.html" ? "/about.html" : "/";
+    var activePage = featurePath === "/downloads.html" ? "/downloads.html" : featurePath === "/about.html" ? "/about.html" : "/";
 
     setActive(featureIsActive ? "features" : activePage);
     featuresMenuLinks.forEach(function (link) {
@@ -94,7 +95,9 @@
   featuresNav.addEventListener("mouseleave", function () {
     if (hoverQuery.matches) closeFeatures(false);
   });
-  featuresNav.addEventListener("focusin", openFeatures);
+  featuresNav.addEventListener("focusin", function (event) {
+    if (event.target !== featuresTrigger) openFeatures();
+  });
   featuresNav.addEventListener("focusout", function () {
     window.setTimeout(function () {
       if (!featuresNav.contains(document.activeElement)) closeFeatures(false);
