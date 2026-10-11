@@ -626,3 +626,63 @@ footer{
 .activation-steps li,.sponsor-tiers li{padding:6px 0}
 @media(max-width:1000px){.site-header nav{gap:24px}.modules-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.site-header{height:auto;min-height:104px;flex-direction:column;padding:12px 16px 0;gap:8px}.brand img{height:42px}.site-header nav{height:38px;gap:22px}.downloads-main{padding:0 22px 32px}.downloads-intro{padding:48px 0 32px}.modules-grid{grid-template-columns:1fr}.downloads-section{padding:30px 0}.downloads-main .download-actions{align-items:flex-start}.licence-panel{padding:22px}.site-header .features-menu{right:50%;transform:translate(50%,-4px)}.site-header .features-nav.is-open .features-menu{transform:translate(50%,0)}}
+
+/* ---------- SHOP LINKS (every page) ---------- */
+/* One clear route to the shop: an amber BUY LICENCE pill in the header, and licence calls to action. */
+nav > a.nav-shop{
+  height:auto;
+  padding:9px 16px;
+  border:1px solid var(--orange);
+  border-radius:999px;
+  color:#f0c27e;
+  gap:.45em;
+  white-space:nowrap;
+  transition:background .2s,color .2s;
+}
+nav > a.nav-shop:hover{background:var(--orange);color:#0a0b0c}
+nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
+.shop-button{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:46px;padding:0 24px;
+  border-radius:999px;
+  background:var(--orange);
+  color:#0a0b0c;
+  font-size:14px;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;
+  transition:background .2s,transform .2s;
+}
+.shop-button:hover{background:#f0b75a;transform:translateY(-1px)}
+.shop-button:focus-visible,.licence-cta-link:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+.bundle-cta{margin-top:26px}
+.licence-cta{
+  max-width:1100px;
+  margin:24px auto 72px;
+  padding:34px 36px;
+  background:linear-gradient(135deg,#151719,#080a0c);
+  border:1px solid #34383b;
+  border-left:2px solid var(--orange);
+  border-radius:10px;
+  color:#b6b9bc;
+}
+.licence-cta-kicker{margin:0 0 10px;color:var(--orange);font-size:11px;letter-spacing:.16em;font-weight:500}
+.licence-cta h2{margin:0 0 12px;color:#e2e4e5;font-size:clamp(22px,2.6vw,30px);font-weight:500;line-height:1.25}
+.licence-cta p{margin:0;max-width:760px;font-size:16px;line-height:1.7}
+.licence-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px}
+.licence-cta-link{color:var(--orange);font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.licence-panel-note{color:#8f9294;font-size:13px}
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:22px;max-width:860px}
+.faq-item{border:1px solid #30373b;border-radius:9px;background:#0a0d0f}
+.faq-item summary{cursor:pointer;padding:16px 20px;color:#dcdfe1;font-size:16px;font-weight:500;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:"+";float:right;color:var(--orange)}
+.faq-item[open] summary:after{content:"–"}
+.faq-item p{margin:0;padding:0 20px 18px;font-size:15px;line-height:1.7}
+.legal-links{display:flex;align-items:center;gap:26px}
+.legal-shop{color:#f0c27e}
+@media (max-width:820px){
+  nav > a.nav-shop{padding:7px 11px}
+  .licence-cta{margin:18px 20px 52px;padding:26px 22px}
+}
+@media (max-width:600px){
+  .nav-shop-long{display:none}
+}

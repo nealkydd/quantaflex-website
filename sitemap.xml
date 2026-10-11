@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://quantaflexmedia.com/</loc></url>
-  <url><loc>https://quantaflexmedia.com/about.html</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/kineplex</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/flexcam</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/cam2cam</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/pro-online-learning</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/advanced-encoder</loc></url>
-  <url><loc>https://quantaflexmedia.com/features/media-inspector</loc></url>
-  <url><loc>https://quantaflexmedia.com/downloads.html</loc></url>
+  <url><loc>https://quantaflexmedia.com/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/about.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/kineplex</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/flexcam</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/cam2cam</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/pro-online-learning</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/advanced-encoder</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/features/media-inspector</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/downloads.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/privacy.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://quantaflexmedia.com/terms.html</loc><lastmod>2026-10-11</lastmod></url>
 </urlset>
