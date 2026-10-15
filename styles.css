@@ -682,3 +682,15 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
 @media (max-width:600px){
   .nav-shop-long{display:none}
 }
+
+/* Illustrated product manual */
+.manual-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:38px;align-items:center;scroll-margin-top:24px}
+.manual-cover{display:block;border:1px solid #42413a;border-radius:10px;overflow:hidden;background:#0b0e0f;box-shadow:0 16px 42px #0008;transition:border-color .2s,transform .2s}
+.manual-cover:hover{border-color:var(--orange);transform:translateY(-3px)}
+.manual-cover img{display:block;width:100%;height:auto}
+.manual-copy .about-kicker{margin:0 0 14px}
+.manual-copy p{margin:12px 0}
+.manual-copy .manual-meta{font-size:13px;color:#92999e;line-height:1.6}
+.dl-btn[href]:hover{border-color:var(--orange);background:#17150f}
+.manual-home-link{margin:24px 0 0;color:#e7a43b;font-size:14px}
+@media(max-width:760px){.manual-section{grid-template-columns:1fr;gap:26px}.manual-cover{max-width:560px}.manual-section .licence-cta-actions{gap:18px}}
