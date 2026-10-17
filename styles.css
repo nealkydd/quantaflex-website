@@ -666,7 +666,7 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
 
 /* Illustrated product manual */
 .manual-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:38px;align-items:center;scroll-margin-top:24px}
-.manual-cover{display:block;border:1px solid #42413a;border-radius:10px;overflow:hidden;background:#0b0e0f;box-shadow:0 16px 42px #0008;transition:border-color .2s,transform .2s}
+.manual-cover{display:block;align-self:start;margin-top:40px;border:1px solid #42413a;border-radius:10px;overflow:hidden;background:#0b0e0f;box-shadow:0 16px 42px #0008;transition:border-color .2s,transform .2s}
 .manual-cover:hover{border-color:var(--orange);transform:translateY(-3px)}
 .manual-cover img{display:block;width:100%;height:auto}
 .manual-copy .about-kicker{margin:0 0 14px}
