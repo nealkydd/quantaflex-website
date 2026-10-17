@@ -6,6 +6,6 @@
     const data = new FormData(form);
     const subject = `Quantaflex enquiry from ${data.get('name')}`;
     const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`;
-    window.location.href = `mailto:hello@quantaflex.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:neal@nk-consultancy.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 })();
