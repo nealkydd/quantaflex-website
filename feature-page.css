@@ -63,10 +63,10 @@
 .showcase-copy h1,
 .showcase-copy h2{
   margin:0;
-  color:#c6c7c8;
+  color:#f0f1f1;
   line-height:1.18;
   letter-spacing:0;
-  font-weight:500;
+  font-weight:650;
 }
 .showcase-copy h1{font-size:42px}
 .showcase-copy h2{font-size:29px}
@@ -115,11 +115,11 @@
 .inspector-copy{max-width:720px}
 .inspector-copy h1{
   margin:0;
-  color:#c6c7c8;
+  color:#f0f1f1;
   font-size:clamp(40px,4vw,58px);
   line-height:1;
   letter-spacing:.04em;
-  font-weight:560;
+  font-weight:700;
 }
 .inspector-subtitle{
   margin:18px 0 0;
@@ -130,11 +130,11 @@
 }
 .inspector-copy h2{
   margin:46px 0 0;
-  color:#b5b7b8;
+  color:#d9dadb;
   font-size:28px;
   line-height:1.25;
   letter-spacing:0;
-  font-weight:500;
+  font-weight:600;
 }
 .inspector-summary{
   max-width:680px;
@@ -264,11 +264,11 @@
 }
 .product-heading h1{
   margin:0;
-  color:#c6c7c8;
+  color:#f0f1f1;
   font-size:clamp(38px,3.6vw,54px);
   line-height:.95;
   letter-spacing:.03em;
-  font-weight:560;
+  font-weight:700;
 }
 .product-heading p{
   margin:15px 0 0;
@@ -364,11 +364,11 @@
 }
 .capability h2{
   margin:0;
-  color:#d0d1d2;
+  color:#e2e3e3;
   font-size:16px;
   line-height:1.25;
   letter-spacing:0;
-  font-weight:500;
+  font-weight:650;
 }
 .capability p{
   margin:6px 0 0;
@@ -396,11 +396,11 @@
 }
 .feature-detail h2{
   margin:0;
-  color:#c6c7c8;
+  color:#e7e8e8;
   font-size:30px;
   line-height:1.18;
   letter-spacing:0;
-  font-weight:500;
+  font-weight:650;
 }
 .feature-detail-copy > p:last-child{
   margin:22px 0 0;
@@ -443,11 +443,11 @@
 .feature-aspect-copy{max-width:330px}
 .feature-aspect h2{
   margin:0;
-  color:#a7a9aa;
+  color:#e0e1e1;
   font-size:24px;
   line-height:1.5;
   letter-spacing:0;
-  font-weight:400;
+  font-weight:600;
 }
 .feature-aspect-copy p{
   margin:18px 0 0;
