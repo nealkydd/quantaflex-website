@@ -5,6 +5,7 @@
   const link = document.querySelector('#workflow-link');
   const controls = [...document.querySelectorAll('.workflow-control')];
   if (!cube || !scene || !description || !link || !controls.length) return;
+  document.querySelectorAll('.cube-face img').forEach(image => { image.draggable = false; });
 
   const workflows = {
     platform: { x:-18, y:28, text:'One focused desktop platform for the jobs that usually send you looking for another app.', href:'/downloads.html', label:'Explore Quantaflex' },
@@ -15,7 +16,7 @@
     kineplex: { x:-18, y:208, text:'Give local media the home-cinema treatment, with robust playback that keeps your files on your machine.', href:'/features/kineplex', label:'Explore Kineplex' },
     inspector: { x:-18, y:28, text:'Inspect the technical detail inside your media before it becomes a problem further down the workflow.', href:'/features/media-inspector', label:'Explore Media Inspector' }
   };
-  let current = 'platform', rx = -18, ry = 28, dragging = false, startX, startY, startRx, startRy;
+  let current = 'platform', rx = -18, ry = 28, dragging = false, startX, startY, startRx, startRy, pressedModule, moved;
   const render = () => cube.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
   const select = key => {
     const item = workflows[key]; if (!item) return;
@@ -24,9 +25,10 @@
     controls.forEach(button => { const active = button.dataset.workflow === key; button.classList.toggle('is-active', active); button.setAttribute('aria-selected', active); });
   };
   controls.forEach(button => button.addEventListener('click', () => select(button.dataset.workflow)));
-  scene.addEventListener('pointerdown', event => { dragging = true; startX = event.clientX; startY = event.clientY; startRx = rx; startRy = ry; scene.setPointerCapture(event.pointerId); scene.classList.add('is-dragging'); });
-  scene.addEventListener('pointermove', event => { if (!dragging) return; ry = startRy + (event.clientX - startX) * .45; rx = Math.max(-75, Math.min(75, startRx - (event.clientY - startY) * .35)); render(); });
-  const finish = () => { dragging = false; scene.classList.remove('is-dragging'); };
+  scene.addEventListener('pointerdown', event => { event.preventDefault(); dragging = true; moved = false; pressedModule = event.target.closest('.cube-face')?.dataset.module; startX = event.clientX; startY = event.clientY; startRx = rx; startRy = ry; scene.setPointerCapture(event.pointerId); scene.classList.add('is-dragging'); });
+  scene.addEventListener('pointermove', event => { if (!dragging) return; const dx = event.clientX - startX; const dy = event.clientY - startY; if (Math.abs(dx) > 7 || Math.abs(dy) > 7) moved = true; ry = startRy + dx * .45; rx = Math.max(-75, Math.min(75, startRx - dy * .35)); render(); });
+  const finish = () => { if (dragging && pressedModule && !moved) window.location.assign(workflows[pressedModule].href); dragging = false; pressedModule = undefined; scene.classList.remove('is-dragging'); };
   scene.addEventListener('pointerup', finish); scene.addEventListener('pointercancel', finish);
+  scene.addEventListener('dragstart', event => event.preventDefault());
   render();
 })();

@@ -202,7 +202,7 @@ nav .nav-preview:after{
 .cube-face:after{content:"";position:absolute;inset:7px;border:1px solid rgba(242,184,103,.16);background:linear-gradient(118deg,transparent 25%,rgba(255,198,117,.1) 43%,transparent 51%,rgba(235,118,20,.07) 69%,transparent 78%);mix-blend-mode:screen;pointer-events:none}
 .cube-front{transform:translateZ(108px);background:linear-gradient(135deg,rgba(48,47,43,.82),rgba(6,6,6,.58) 62%,rgba(70,35,7,.58))}
 .cube-back{transform:rotateY(180deg) translateZ(108px)}.cube-right{transform:rotateY(90deg) translateZ(108px)}.cube-left{transform:rotateY(-90deg) translateZ(108px)}.cube-top{transform:rotateX(90deg) translateZ(108px)}.cube-bottom{transform:rotateX(-90deg) translateZ(108px)}
-.cube-face img{width:86px;height:86px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(231,164,59,.15))}
+.cube-face img{width:86px;height:86px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(231,164,59,.15));pointer-events:none;user-select:none;-webkit-user-drag:none}
 .cube-face strong{font-size:15px;font-weight:600;letter-spacing:.08em;color:#e2b774}.cube-face small{font-size:8px;letter-spacing:.18em;color:#9a784c}
 .workflow-controls{grid-column:1/-1;display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid rgba(192,133,60,.25);border-bottom:1px solid rgba(192,133,60,.25);margin-top:10px}
 .workflow-control{min-height:78px;padding:9px 8px;border:0;border-right:1px solid rgba(192,133,60,.17);background:transparent;color:#a47a48;font:inherit;cursor:pointer;transition:background .2s,color .2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.workflow-control:last-child{border-right:0}
