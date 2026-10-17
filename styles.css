@@ -294,6 +294,10 @@ footer{
 .footer-links{display:flex;align-items:center;gap:18px}
 .footer-links a{transition:.18s ease}
 .footer-links a:hover{color:#a6a6a6}
+.contact-main{max-width:1240px;margin:0 auto;padding:112px 58px 108px;background:radial-gradient(circle at 6% 22%,rgba(190,92,19,.22),transparent 24%)}
+.contact-kicker{display:inline-flex;align-items:center;gap:12px;margin:0 0 34px;padding:10px 20px;border:1px solid rgba(210,184,137,.28);border-radius:999px;color:#b9b5bc;font-size:12px;letter-spacing:.22em}.contact-kicker span{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px rgba(255,133,30,.7)}
+.contact-main h1{margin:0;color:#f6f5f7;font-size:clamp(58px,8vw,112px);line-height:.92;letter-spacing:-.06em}.contact-intro{max-width:720px;margin:38px 0 72px;color:#bcb9be;font-size:clamp(20px,2.2vw,30px);line-height:1.42}
+.contact-form{max-width:1120px;padding:58px 64px;border:1px solid rgba(210,184,137,.2);border-radius:28px;background:rgba(10,10,10,.72);box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}.contact-fields{display:grid;grid-template-columns:1fr 1fr;gap:32px}.contact-form label{display:grid;gap:13px;color:#aaa5ac;font-size:13px;letter-spacing:.1em}.contact-form input,.contact-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(210,184,137,.18);border-radius:15px;background:#070707;color:#f2edf4;font:inherit;letter-spacing:normal;padding:18px 20px;outline:none}.contact-form input:focus,.contact-form textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(240,116,20,.13)}.contact-form textarea{resize:vertical;min-height:180px;margin-top:26px}.contact-note{margin:22px 0 28px;color:#8f8b91;font-size:13px;line-height:1.5}.contact-note a,.contact-direct a{color:#dbb67a}.contact-submit{float:right;border:0;border-radius:999px;background:var(--orange);color:#120a04;padding:16px 34px;font:600 18px/1 inherit;cursor:pointer}.contact-submit span{margin-left:12px;font-size:26px;vertical-align:-2px}.contact-form:after{content:"";display:block;clear:both}.contact-direct{margin:26px 0 0;color:#97939a}
 
 /* ---------- ABOUT ---------- */
 .about-page,
@@ -546,6 +550,7 @@ footer{
   footer{flex-direction:column;gap:16px;align-items:flex-start}
   .footer-links{flex-wrap:wrap;gap:14px}
 }
+@media (max-width:700px){.contact-main{padding:72px 22px}.contact-intro{margin:28px 0 42px}.contact-form{padding:28px 22px;border-radius:20px}.contact-fields{grid-template-columns:1fr;gap:22px}.contact-submit{float:none;width:100%;margin-top:6px}}
 @media (max-width:700px){
   .about-hero{padding:72px 22px 64px}
   .about-content{padding:0 22px 42px}

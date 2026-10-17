@@ -1,5 +1,14 @@
 /* Shared primary navigation and Features dropdown behaviour. */
 (function () {
+  var nav = document.querySelector('nav[aria-label="Primary"]');
+  if (nav && !nav.querySelector('.nav-contact')) {
+    var contact = document.createElement('a');
+    contact.className = 'nav-contact';
+    contact.href = '/contact.html';
+    contact.textContent = 'CONTACT';
+    var buy = nav.querySelector('.nav-shop');
+    nav.insertBefore(contact, buy || null);
+  }
   var links = document.querySelectorAll('nav > a');
   var featuresNav = document.querySelector('.features-nav');
   var featuresTrigger = document.querySelector('.features-trigger');
@@ -35,7 +44,7 @@
   function syncActiveLink() {
     var featurePath = window.location.pathname.replace(/\/$/, "");
     var featureIsActive = featurePath.indexOf("/features/") === 0;
-    var activePage = featurePath === "/downloads.html" ? "/downloads.html" : featurePath === "/about.html" ? "/about.html" : "/";
+    var activePage = featurePath === "/downloads.html" ? "/downloads.html" : featurePath === "/about.html" ? "/about.html" : featurePath === "/contact.html" ? "/contact.html" : "/";
 
     setActive(featureIsActive ? "features" : activePage);
     featuresMenuLinks.forEach(function (link) {
