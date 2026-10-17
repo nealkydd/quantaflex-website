@@ -102,6 +102,9 @@
 .showcase-section:not(.showcase-section--visual-first) .showcase-visual--compact{
   justify-self:end;
 }
+.encoder-page .encoder-section{
+  border-top:1px solid #292b2c;
+}
 .inspector-hero{
   min-height:540px;
   display:grid;
