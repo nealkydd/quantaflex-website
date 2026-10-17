@@ -116,15 +116,21 @@
         <div class="workflow-stage" aria-label="Interactive Quantaflex workflow block">
           <div class="workflow-hint" aria-hidden="true">DRAG TO EXPLORE</div>
           <div class="cube-scene" id="cube-scene">
-            <div class="workflow-cube" id="workflow-cube" role="img" aria-label="Quantaflex workflow cube. Select a module below to explore.">
-              <div class="cube-face cube-front" data-module="inspector"><img src="assets/workflow-icons/inspector.webp" alt=""><strong>INSPECTOR</strong><small>MEDIA ANALYSIS</small></div>
-              <div class="cube-face cube-back" data-module="kineplex"><img src="assets/workflow-icons/kineplex.webp" alt=""><strong>KINEPLEX</strong><small>HOME CINEMA</small></div>
-              <div class="cube-face cube-right" data-module="flexcam"><img src="assets/workflow-icons/flexcam.webp" alt=""><strong>FLEXCAM</strong><small>SOCIAL VIDEO</small></div>
-              <div class="cube-face cube-left" data-module="cam2cam"><img src="assets/workflow-icons/cam2cam.webp" alt=""><strong>CAM2CAM</strong><small>PRIVATE CALLS</small></div>
-              <div class="cube-face cube-top" data-module="learning"><img src="assets/workflow-icons/learning.webp" alt=""><strong>PRO LEARNING</strong><small>TUTORIALS</small></div>
-              <div class="cube-face cube-bottom" data-module="encoder"><img src="assets/workflow-icons/encoder.webp" alt=""><strong>ENCODER</strong><small>MEDIA OUTPUT</small></div>
+            <div class="workflow-cube" id="workflow-cube" aria-label="Quantaflex workflow cube. Click a visible module to explore it.">
+              <div class="cube-face cube-front" data-module="inspector" role="link" tabindex="0" aria-label="Explore Media Inspector"><img src="assets/workflow-icons/inspector.webp" alt=""><strong>INSPECTOR</strong><small>MEDIA ANALYSIS</small></div>
+              <div class="cube-face cube-back" data-module="kineplex" role="link" tabindex="0" aria-label="Explore Kineplex"><img src="assets/workflow-icons/kineplex.webp" alt=""><strong>KINEPLEX</strong><small>HOME CINEMA</small></div>
+              <div class="cube-face cube-right" data-module="flexcam" role="link" tabindex="0" aria-label="Explore FlexCam"><img src="assets/workflow-icons/flexcam.webp" alt=""><strong>FLEXCAM</strong><small>SOCIAL VIDEO</small></div>
+              <div class="cube-face cube-left" data-module="cam2cam" role="link" tabindex="0" aria-label="Explore Cam2Cam"><img src="assets/workflow-icons/cam2cam.webp" alt=""><strong>CAM2CAM</strong><small>PRIVATE CALLS</small></div>
+              <div class="cube-face cube-top" data-module="learning" role="link" tabindex="0" aria-label="Explore Pro Online Learning"><img src="assets/workflow-icons/learning.webp" alt=""><strong>PRO LEARNING</strong><small>TUTORIALS</small></div>
+              <div class="cube-face cube-bottom" data-module="encoder" role="link" tabindex="0" aria-label="Explore Advanced Encoder"><img src="assets/workflow-icons/encoder.webp" alt=""><strong>ENCODER</strong><small>MEDIA OUTPUT</small></div>
             </div>
           </div>
+        </div>
+        <div class="workflow-promises" aria-label="Quantaflex platform principles">
+          <span>NO SUBSCRIPTION</span>
+          <span>LOCAL WORKFLOW</span>
+          <span>PERMANENT LICENCE</span>
+          <span>NO FORCED CLOUD</span>
         </div>
         <div class="workflow-controls" role="tablist" aria-label="Choose a Quantaflex workflow">
           <button class="workflow-control is-active" type="button" data-workflow="platform" role="tab" aria-selected="true">Q<span>THE PLATFORM</span></button>

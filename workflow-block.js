@@ -4,7 +4,7 @@
   const description = document.querySelector('#workflow-description');
   const link = document.querySelector('#workflow-link');
   const controls = [...document.querySelectorAll('.workflow-control')];
-  if (!cube || !scene || !description || !link || !controls.length) return;
+  if (!cube || !scene || !description || !link) return;
   document.querySelectorAll('.cube-face img').forEach(image => { image.draggable = false; });
 
   const workflows = {
@@ -25,6 +25,9 @@
     controls.forEach(button => { const active = button.dataset.workflow === key; button.classList.toggle('is-active', active); button.setAttribute('aria-selected', active); });
   };
   controls.forEach(button => button.addEventListener('click', () => select(button.dataset.workflow)));
+  document.querySelectorAll('.cube-face').forEach(face => face.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.assign(workflows[face.dataset.module].href); }
+  }));
   scene.addEventListener('pointerdown', event => { event.preventDefault(); dragging = true; moved = false; pressedModule = event.target.closest('.cube-face')?.dataset.module; startX = event.clientX; startY = event.clientY; startRx = rx; startRy = ry; scene.setPointerCapture(event.pointerId); scene.classList.add('is-dragging'); });
   scene.addEventListener('pointermove', event => { if (!dragging) return; const dx = event.clientX - startX; const dy = event.clientY - startY; if (Math.abs(dx) > 7 || Math.abs(dy) > 7) moved = true; ry = startRy + dx * .45; rx = Math.max(-75, Math.min(75, startRx - dy * .35)); render(); });
   const finish = () => { if (dragging && pressedModule && !moved) window.location.assign(workflows[pressedModule].href); dragging = false; pressedModule = undefined; scene.classList.remove('is-dragging'); };
