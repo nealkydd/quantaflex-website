@@ -191,10 +191,10 @@ nav .nav-preview:after{
 .workflow-link{display:inline-flex;margin-top:28px;padding-bottom:5px;border-bottom:1px solid #a26b26;color:#dbb67a;font-size:13px;letter-spacing:.06em;transition:color .2s,border-color .2s}
 .workflow-link:hover,.workflow-link:focus-visible{color:#ffe1af;border-color:#f5ae46;outline:none}
 .workflow-link span{margin-left:8px;color:var(--orange)}
-.workflow-stage{position:relative;min-height:420px;display:grid;place-items:center;perspective:1800px;isolation:isolate}
+.workflow-stage{position:relative;min-height:420px;display:grid;place-items:center;isolation:isolate}
 .workflow-stage:before{content:"";position:absolute;width:380px;height:95px;bottom:40px;border-radius:50%;background:radial-gradient(ellipse,rgba(228,123,28,.45),rgba(84,38,8,.16) 42%,transparent 70%);filter:blur(13px);z-index:-1}
 .workflow-hint{position:absolute;right:4%;bottom:22px;color:#936a3a;font-size:9px;letter-spacing:.21em;opacity:.85}
-.cube-scene{width:312px;height:312px;display:grid;place-items:center;cursor:grab;touch-action:none;user-select:none}
+.cube-scene{width:312px;height:312px;display:grid;place-items:center;perspective:1100px;perspective-origin:50% 50%;transform-style:preserve-3d;cursor:grab;touch-action:none;user-select:none}
 .cube-scene.is-dragging{cursor:grabbing}
 .workflow-cube{--cube-edge:216px;--cube-half:108px;position:relative;width:var(--cube-edge);height:var(--cube-edge);transform-style:preserve-3d;transform-origin:center center;transition:transform .7s cubic-bezier(.2,.8,.2,1);will-change:transform}
 .is-dragging .workflow-cube{transition:none}
