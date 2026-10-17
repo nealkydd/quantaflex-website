@@ -8,7 +8,7 @@
   document.querySelectorAll('.cube-face img').forEach(image => { image.draggable = false; });
 
   const workflows = {
-    platform: { x:-18, y:28, text:'One focused desktop platform for the jobs that usually send you looking for another app.', href:'/downloads.html', label:'Explore Quantaflex' },
+    platform: { x:-30, y:45, text:'One focused desktop platform for the jobs that usually send you looking for another app.', href:'/downloads.html', label:'Explore Quantaflex' },
     flexcam: { x:-18, y:-62, text:'Edit, format, and prepare social video without passing the work through a chain of disconnected tools.', href:'/features/flexcam', label:'Explore FlexCam' },
     cam2cam: { x:-18, y:118, text:'Private, direct video calls with a clear room-code flow and no meeting-platform clutter.', href:'/features/cam2cam', label:'Explore Cam2Cam' },
     learning: { x:72, y:28, text:'Present slides, guide tutorials, and keep the teaching experience in one focused space.', href:'/features/pro-online-learning', label:'Explore Pro Learning' },
@@ -16,7 +16,7 @@
     kineplex: { x:-18, y:208, text:'Give local media the home-cinema treatment, with robust playback that keeps your files on your machine.', href:'/features/kineplex', label:'Explore Kineplex' },
     inspector: { x:-18, y:28, text:'Inspect the technical detail inside your media before it becomes a problem further down the workflow.', href:'/features/media-inspector', label:'Explore Media Inspector' }
   };
-  let current = 'platform', rx = -18, ry = 28, dragging = false, startX, startY, startRx, startRy, pressedModule, moved;
+  let current = 'platform', rx = -30, ry = 45, dragging = false, startX, startY, startRx, startRy, pressedModule, moved;
   const render = () => cube.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
   const select = key => {
     const item = workflows[key]; if (!item) return;
