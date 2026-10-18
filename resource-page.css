@@ -40,3 +40,5 @@
 .article-meta{margin:19px 0 0!important;color:#d79d50!important;font-size:10px!important;font-weight:700!important;letter-spacing:.17em!important;line-height:1.45!important}.article-meta+p{margin-top:22px!important}
 
 .article-visual{margin:0 0 47px;border:1px solid rgba(231,164,59,.32);background:#080909;box-shadow:0 20px 44px rgba(0,0,0,.3),0 0 26px rgba(231,110,17,.06)}.article-visual img{display:block;width:100%;height:auto}.article-visual figcaption{padding:12px 15px;border-top:1px solid #282a2b;color:#9b9d9e;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+
+.campaign-lead{max-width:760px!important;color:#cac7c0!important;font-size:clamp(20px,2vw,27px)!important;line-height:1.48!important}.campaign-lead strong{color:#f0c175;font-weight:600}
