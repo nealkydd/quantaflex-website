@@ -1,5 +1,13 @@
 /* Shared primary navigation and Features dropdown behaviour. */
 (function () {
+  var footerLinks = document.querySelector('.footer-links');
+  if (footerLinks && !footerLinks.querySelector('.nav-resources')) {
+    var resources = document.createElement('a');
+    resources.className = 'nav-resources';
+    resources.href = '/resources/';
+    resources.textContent = 'Resources';
+    footerLinks.insertBefore(resources, footerLinks.firstChild);
+  }
   var nav = document.querySelector('nav[aria-label="Primary"]');
   if (nav && !nav.querySelector('.nav-contact')) {
     var contact = document.createElement('a');
