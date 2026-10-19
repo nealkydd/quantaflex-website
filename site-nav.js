@@ -1,5 +1,13 @@
 /* Shared primary navigation and Features dropdown behaviour. */
 (function () {
+  function ensureSiteIcon(rel, href) {
+    if (document.head.querySelector('link[rel="' + rel + '"]')) return;
+    var icon = document.createElement('link');
+    icon.rel = rel;
+    icon.href = href;
+    document.head.appendChild(icon);
+  }
+  ensureSiteIcon('icon', '/assets/q-quantaflex.png?v=1');
   var footerLinks = document.querySelector('.footer-links');
   var journalFooterLink = footerLinks && footerLinks.querySelector('a[href="/journal/"]');
   if (journalFooterLink) {
