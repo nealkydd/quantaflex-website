@@ -1,6 +1,11 @@
 /* Shared primary navigation and Features dropdown behaviour. */
 (function () {
   var footerLinks = document.querySelector('.footer-links');
+  var journalFooterLink = footerLinks && footerLinks.querySelector('a[href="/journal/"]');
+  if (journalFooterLink) {
+    journalFooterLink.href = '/journal/own-it/';
+    journalFooterLink.textContent = 'Blog';
+  }
   if (footerLinks && !footerLinks.querySelector('.nav-resources')) {
     var resources = document.createElement('a');
     resources.className = 'nav-resources';
@@ -9,6 +14,14 @@
     footerLinks.insertBefore(resources, footerLinks.firstChild);
   }
   var nav = document.querySelector('nav[aria-label="Primary"]');
+  if (nav && !nav.querySelector('.nav-blog')) {
+    var blog = document.createElement('a');
+    blog.className = 'nav-blog';
+    blog.href = '/journal/own-it/';
+    blog.textContent = 'BLOG';
+    var blogBuy = nav.querySelector('.nav-shop');
+    nav.insertBefore(blog, blogBuy || null);
+  }
   if (nav && !nav.querySelector('.nav-contact')) {
     var contact = document.createElement('a');
     contact.className = 'nav-contact';
@@ -52,7 +65,7 @@
   function syncActiveLink() {
     var featurePath = window.location.pathname.replace(/\/$/, "");
     var featureIsActive = featurePath.indexOf("/features/") === 0;
-    var activePage = featurePath === "/downloads.html" ? "/downloads.html" : featurePath === "/about.html" ? "/about.html" : featurePath === "/contact.html" ? "/contact.html" : "/";
+    var activePage = featurePath === "/downloads.html" ? "/downloads.html" : featurePath === "/about.html" ? "/about.html" : featurePath === "/contact.html" ? "/contact.html" : featurePath.indexOf("/journal/") === 0 ? "/journal/own-it/" : "/";
 
     setActive(featureIsActive ? "features" : activePage);
     featuresMenuLinks.forEach(function (link) {
