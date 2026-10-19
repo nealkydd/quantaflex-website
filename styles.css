@@ -686,3 +686,12 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
   .site-header .nav-contact{order:5}
   .site-header .nav-shop{order:6}
 }
+
+/* Phone hero: preserve the full Q artwork, with readable copy below it. */
+@media (max-width:600px){
+  .hero{display:block;min-height:0;padding:0;background:#000;text-align:left}
+  .hero::before{content:"";display:block;width:100%;aspect-ratio:2000 / 667;background:url("assets/hero-banner.webp") left center / contain no-repeat}
+  .hero .hero-copy{width:100%;padding:28px 24px 34px}
+  .hero h1{font-size:30px}
+  .hero-copy p{font-size:16px}
+}
