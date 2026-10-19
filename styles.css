@@ -687,11 +687,11 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
   .site-header .nav-shop{order:6}
 }
 
-/* Phone hero: preserve the full Q artwork, with readable copy below it. */
+/* Phone hero: keep the copy in the clear space to the right of the Q. */
 @media (max-width:600px){
-  .hero{display:block;min-height:0;padding:0;background:#000;text-align:left}
-  .hero::before{content:"";display:block;width:100%;aspect-ratio:2000 / 667;background:url("assets/hero-banner.webp") left center / contain no-repeat}
-  .hero .hero-copy{width:100%;padding:28px 24px 34px}
-  .hero h1{font-size:30px}
-  .hero-copy p{font-size:16px}
+  .hero{min-height:300px;padding:28px 20px 28px 34%;justify-content:flex-end;background-position:center;text-align:left}
+  .hero .hero-copy{width:100%;min-width:0}
+  .hero h1{font-size:clamp(23px,5.4vw,30px)}
+  .hero-copy p{font-size:15px;line-height:1.5;margin-top:20px}
+  .hero .hero-eyebrow{font-size:9px!important;letter-spacing:.18em}
 }
