@@ -675,3 +675,14 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
 .dl-btn[href]:hover{border-color:var(--orange);background:#17150f}
 .manual-home-link{margin:24px 0 0;color:#e7a43b;font-size:14px}
 @media(max-width:760px){.manual-section{grid-template-columns:1fr;gap:26px}.manual-cover{max-width:560px}.manual-section .licence-cta-actions{gap:18px}}
+
+
+/* Mobile navigation: keep the existing spacing; place FEATURES after DOWNLOADS and ABOUT so its menu opens cleanly within the screen. */
+@media (max-width:600px){
+  .site-header .nav-downloads{order:1}
+  .site-header .nav-about{order:2}
+  .site-header .features-nav{order:3}
+  .site-header .nav-blog{order:4}
+  .site-header .nav-contact{order:5}
+  .site-header .nav-shop{order:6}
+}
