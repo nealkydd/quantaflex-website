@@ -657,3 +657,10 @@
   }
   .feature-aspect h2{font-size:21px}
 }
+
+/* 1.5.7 feature-page compatibility and session details. */
+.feature-platform-note{max-width:1100px;margin:36px auto 0;color:#a9aaac;font-size:14px;line-height:1.8;padding:0 24px}
+.feature-text-section .feature-detail-copy{max-width:650px;color:#a9aaac;font-size:17px;line-height:1.8}
+.feature-detail-copy h3{color:#eee;font-size:20px;margin:0 0 12px}
+.feature-detail-copy p+h3{margin-top:28px}
+.feature-detail-copy p{margin:0 0 18px}
