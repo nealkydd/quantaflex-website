@@ -50,3 +50,6 @@
 .journal-page .article-layout{display:block;max-width:1000px}
 .journal-page .article-body{max-width:840px;margin:0 auto}
 @media (max-width:820px){.journal-page .article-body{max-width:none}}
+
+/* Resource guide version and download reference. */
+.resource-version{margin:40px 0 0;color:#a7a8aa;font-size:13px;line-height:1.7}.resource-version a{color:#e1bc7c;text-decoration:underline;text-underline-offset:3px}.resource-section>.resource-visual{margin-top:30px}
