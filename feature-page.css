@@ -207,7 +207,7 @@
   padding:0;
   display:block;
   background-color:#050606;
-  background-image:url("/assets/pro-online-learning-header.png");
+  background-image:url("/assets/pro-online-learning-real-ui.webp");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center 25%;
@@ -609,7 +609,7 @@
     min-height:0;
     aspect-ratio:3 / 1;
     padding:0;
-    background-image:url("/assets/pro-online-learning-header.png");
+    background-image:url("/assets/pro-online-learning-real-ui.webp");
     background-size:cover;
     background-position:center 25%;
   }
