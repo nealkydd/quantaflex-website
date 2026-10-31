@@ -244,6 +244,7 @@
   margin:0;
   color:#fff;
   font-size:clamp(28px,3.1vw,59px);
+  font-family:"Montserrat","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;
   font-weight:800;
   line-height:.98;
   letter-spacing:-.045em;
@@ -261,6 +262,7 @@
   padding:clamp(9px,.9vw,17px) 0  clamp(9px,1vw,18px) clamp(14px,1.2vw,24px);
   background:#ee790f;
   color:#fff;
+  font-family:"Montserrat","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;
   font-size:clamp(15px,1.7vw,31px);
   font-weight:800;
   line-height:1;
