@@ -214,11 +214,63 @@
   border-bottom:1px solid #191b1c;
 }
 .learning-page .learning-header-stage > *{
-  opacity:0;
   pointer-events:none;
 }
 .learning-page .learning-header-stage:before{
   display:none;
+}
+.learning-page .learning-header-copy{
+  position:absolute;
+  z-index:2;
+  top:9%;
+  left:60.25%;
+  width:36.5%;
+  color:#fff;
+}
+.learning-page .learning-header-logo{
+  display:block;
+  width:min(100%,460px);
+  height:auto;
+  margin:0 0 clamp(18px,2vw,34px);
+}
+.learning-page .learning-header-eyebrow{
+  margin:0 0 clamp(12px,1.2vw,22px);
+  color:#ed7b19;
+  font-size:clamp(16px,1.8vw,34px);
+  font-weight:400;
+  line-height:1;
+}
+.learning-page .learning-header-copy h1{
+  margin:0;
+  color:#fff;
+  font-size:clamp(28px,3.1vw,59px);
+  font-weight:800;
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.learning-page .learning-header-copy h1 span{
+  display:block;
+  margin-top:clamp(8px,.8vw,16px);
+  font-size:.94em;
+  line-height:1;
+}
+.learning-page .learning-header-subscription{
+  display:block;
+  width:calc(100% + 14vw);
+  margin:clamp(16px,2vw,34px) 0 0;
+  padding:clamp(9px,.9vw,17px) 0  clamp(9px,1vw,18px) clamp(14px,1.2vw,24px);
+  background:#ee790f;
+  color:#fff;
+  font-size:clamp(15px,1.7vw,31px);
+  font-weight:800;
+  line-height:1;
+  white-space:nowrap;
+}
+.learning-page .learning-header-url{
+  margin:clamp(14px,1.5vw,25px) 0 0;
+  color:#fff;
+  font-size:clamp(13px,1.35vw,25px);
+  line-height:1;
 }
 .kineplex-page .feature-stage:before,
 .flexcam-page .feature-stage:before{
@@ -559,6 +611,14 @@
     background-size:cover;
     background-position:center 25%;
   }
+  .learning-page .learning-header-copy{
+    top:9%;
+    left:59%;
+    width:39%;
+  }
+  .learning-page .learning-header-subscription{
+    width:calc(100% + 8vw);
+  }
   .feature-stage{
     min-height:0;
     grid-template-columns:1fr;
@@ -650,6 +710,12 @@
   .kineplex-page .feature-stage,
   .flexcam-page .feature-stage{padding:42px 20px 0}
   .learning-page .learning-header-stage{padding:0;aspect-ratio:3 / 1;background-size:cover;background-position:center 25%;}
+  .learning-page .learning-header-copy{top:8%;left:54%;width:45%}
+  .learning-page .learning-header-logo{margin-bottom:9px}
+  .learning-page .learning-header-eyebrow{margin-bottom:7px;font-size:12px}
+  .learning-page .learning-header-copy h1{font-size:23px}
+  .learning-page .learning-header-subscription{width:calc(100% + 2vw);margin-top:12px;padding:8px 0 8px 10px;font-size:12px}
+  .learning-page .learning-header-url{margin-top:10px;font-size:11px}
   .feature-stage{padding:42px 20px 0}
   .visual-left{padding:42px 20px 0}
   .feature-kicker{margin-bottom:26px}
