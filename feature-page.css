@@ -200,6 +200,26 @@
   background-position:center;
   background-size:100% 100%;
 }
+.learning-page .learning-header-stage{
+  height:auto;
+  min-height:0;
+  aspect-ratio:3 / 1;
+  padding:0;
+  display:block;
+  background-color:#050606;
+  background-image:url("/assets/pro-online-learning-header.webp");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center 25%;
+  border-bottom:1px solid #191b1c;
+}
+.learning-page .learning-header-stage > *{
+  opacity:0;
+  pointer-events:none;
+}
+.learning-page .learning-header-stage:before{
+  display:none;
+}
 .kineplex-page .feature-stage:before,
 .flexcam-page .feature-stage:before{
   display:none;
@@ -529,6 +549,16 @@
     padding:54px 28px 0;
     background:#050606;
   }
+  .learning-page .learning-header-stage{
+    display:block;
+    height:auto;
+    min-height:0;
+    aspect-ratio:3 / 1;
+    padding:0;
+    background-image:url("/assets/pro-online-learning-header.webp");
+    background-size:cover;
+    background-position:center 25%;
+  }
   .feature-stage{
     min-height:0;
     grid-template-columns:1fr;
@@ -619,6 +649,7 @@
   .showcase-description{font-size:15px}
   .kineplex-page .feature-stage,
   .flexcam-page .feature-stage{padding:42px 20px 0}
+  .learning-page .learning-header-stage{padding:0;aspect-ratio:3 / 1;background-size:cover;background-position:center 25%;}
   .feature-stage{padding:42px 20px 0}
   .visual-left{padding:42px 20px 0}
   .feature-kicker{margin-bottom:26px}
