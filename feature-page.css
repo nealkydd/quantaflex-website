@@ -222,28 +222,28 @@
 .learning-page .learning-header-copy{
   position:absolute;
   z-index:2;
-  top:9%;
-  left:60.25%;
-  width:36.5%;
+  top:5.5%;
+  left:59.25%;
+  width:39.5%;
   color:#fff;
 }
 .learning-page .learning-header-logo{
   display:block;
-  width:min(100%,460px);
+  width:min(100%,400px);
   height:auto;
-  margin:0 0 clamp(18px,2vw,34px);
+  margin:0 0 clamp(10px,1vw,18px);
 }
 .learning-page .learning-header-eyebrow{
-  margin:0 0 clamp(12px,1.2vw,22px);
+  margin:0 0 clamp(8px,.7vw,13px);
   color:#ed7b19;
-  font-size:clamp(16px,1.8vw,34px);
+  font-size:clamp(16px,1.55vw,28px);
   font-weight:400;
   line-height:1;
 }
 .learning-page .learning-header-copy h1{
   margin:0;
   color:#fff;
-  font-size:clamp(28px,3.1vw,59px);
+  font-size:clamp(28px,2.8vw,52px);
   font-family:"Montserrat","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;
   font-weight:800;
   line-height:.98;
@@ -251,27 +251,27 @@
 }
 .learning-page .learning-header-copy h1 span{
   display:block;
-  margin-top:clamp(8px,.8vw,16px);
+  margin-top:clamp(6px,.55vw,10px);
   font-size:.94em;
   line-height:1;
 }
 .learning-page .learning-header-subscription{
   display:block;
   width:calc(100% + 14vw);
-  margin:clamp(16px,2vw,34px) 0 0;
-  padding:clamp(9px,.9vw,17px) 0  clamp(9px,1vw,18px) clamp(14px,1.2vw,24px);
+  margin:clamp(12px,1vw,19px) 0 0;
+  padding:clamp(8px,.7vw,13px) 0 clamp(8px,.75vw,14px) clamp(14px,1.2vw,24px);
   background:#ee790f;
   color:#fff;
   font-family:"Montserrat","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;
-  font-size:clamp(15px,1.7vw,31px);
+  font-size:clamp(15px,1.45vw,27px);
   font-weight:800;
   line-height:1;
   white-space:nowrap;
 }
 .learning-page .learning-header-url{
-  margin:clamp(14px,1.5vw,25px) 0 0;
+  margin:clamp(11px,.85vw,16px) 0 0;
   color:#fff;
-  font-size:clamp(13px,1.35vw,25px);
+  font-size:clamp(13px,1.15vw,21px);
   line-height:1;
 }
 .kineplex-page .feature-stage:before,
@@ -614,9 +614,9 @@
     background-position:center 25%;
   }
   .learning-page .learning-header-copy{
-    top:9%;
-    left:59%;
-    width:39%;
+    top:5.5%;
+    left:57%;
+    width:43%;
   }
   .learning-page .learning-header-subscription{
     width:calc(100% + 8vw);
