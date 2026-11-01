@@ -219,6 +219,22 @@
 .learning-page .learning-header-stage:before{
   display:none;
 }
+.encoder-page .encoder-header-stage{
+  height:auto;
+  min-height:0;
+  aspect-ratio:3 / 1;
+  padding:0;
+  display:block;
+  background-color:#050606;
+  background-image:url("/assets/advanced-encoder-header.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid #191b1c;
+}
+.encoder-page .encoder-header-stage:before{
+  display:none;
+}
 .learning-page .learning-header-copy{
   position:absolute;
   z-index:2;
@@ -613,6 +629,15 @@
     background-size:cover;
     background-position:center 25%;
   }
+  .encoder-page .encoder-header-stage{
+    display:block;
+    height:auto;
+    min-height:0;
+    aspect-ratio:3 / 1;
+    padding:0;
+    background-size:cover;
+    background-position:center;
+  }
   .learning-page .learning-header-copy{
     top:5.5%;
     left:57%;
@@ -712,6 +737,7 @@
   .kineplex-page .feature-stage,
   .flexcam-page .feature-stage{padding:42px 20px 0}
   .learning-page .learning-header-stage{padding:0;aspect-ratio:3 / 1;background-size:cover;background-position:center 25%;}
+  .encoder-page .encoder-header-stage{padding:0;aspect-ratio:3 / 1;background-size:cover;background-position:center;}
   .learning-page .learning-header-copy{top:8%;left:54%;width:45%}
   .learning-page .learning-header-logo{margin-bottom:9px}
   .learning-page .learning-header-eyebrow{margin-bottom:7px;font-size:12px}
