@@ -191,7 +191,7 @@ nav .nav-preview:after{
 .workflow-inner{position:relative;max-width:1210px;margin:0 auto;padding:82px 54px 68px;display:grid;grid-template-columns:minmax(280px,.78fr) minmax(430px,1.2fr);align-items:center;gap:20px}
 .workflow-copy{position:relative;z-index:2;align-self:center}
 .workflow-kicker{margin:0 0 20px;color:#52bb72;font-size:11px;letter-spacing:.25em;font-weight:600}
-.workflow-copy h2{margin:0;color:#d7d8d7;font-size:clamp(34px,4vw,57px);font-weight:450;letter-spacing:-.045em;line-height:1.03}
+.workflow-copy h2{margin:0;color:#fff;font-family:"Inter","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;font-size:clamp(34px,4vw,57px);font-weight:700;letter-spacing:-.045em;line-height:1.03}
 .workflow-copy>p:not(.workflow-kicker){max-width:340px;margin:23px 0 0;color:#87898a;font-size:17px;line-height:1.68}
 .workflow-link{display:inline-flex;margin-top:28px;padding-bottom:5px;border-bottom:1px solid #a26b26;color:#dbb67a;font-size:13px;letter-spacing:.06em;transition:color .2s,border-color .2s}
 .workflow-link:hover,.workflow-link:focus-visible{color:#ffe1af;border-color:#f5ae46;outline:none}
