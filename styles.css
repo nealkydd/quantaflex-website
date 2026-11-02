@@ -6,6 +6,9 @@
   --small:#717171;       /* small labels / footer, darkened ~10% */
   --line:#26292b;
   --orange:#e7a43b;
+  --q-green-deep:#195d3c;
+  --q-green:#38c978;
+  --q-green-glow:rgba(56,201,120,.28);
 }
 
 *{box-sizing:border-box}
@@ -260,11 +263,22 @@ nav .nav-preview:after{
 .dl-btn{
   width:224px;height:62px;
   border-radius:8px;
-  border:1px solid #4a4f52;
+  border:1px solid var(--q-green-deep);
   background:linear-gradient(180deg,#0e1113,#070809);
   display:flex;align-items:center;justify-content:center;gap:14px;
   color:#dfe0e1;
+  box-shadow:inset 0 0 0 1px rgba(56,201,120,.04);
+  transition:border-color .22s ease,background .22s ease,box-shadow .22s ease,transform .22s ease;
 }
+.dl-btn[href]:hover,
+.dl-btn[href]:focus-visible{
+  border-color:var(--q-green);
+  background:linear-gradient(180deg,#10241b,#080d0a);
+  box-shadow:0 0 0 1px rgba(56,201,120,.22),0 0 20px var(--q-green-glow),0 12px 24px rgba(0,0,0,.34),inset 0 0 22px rgba(56,201,120,.08);
+  transform:translateY(-3px);
+}
+.dl-btn[href]:focus-visible{outline:1px solid rgba(112,242,164,.86);outline-offset:4px}
+.dl-btn[href]:active{transform:translateY(-1px);box-shadow:0 0 0 1px rgba(56,201,120,.26),0 0 12px rgba(56,201,120,.25),inset 0 0 18px rgba(56,201,120,.12)}
 .os-icon{display:flex;align-items:center;justify-content:center;color:#eceded}
 .os-icon svg{width:26px;height:26px;display:block}
 .dl-copy{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}
@@ -672,7 +686,7 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
 .manual-copy .about-kicker{margin:0 0 14px}
 .manual-copy p{margin:12px 0}
 .manual-copy .manual-meta{font-size:13px;color:#92999e;line-height:1.6}
-.dl-btn[href]:hover{border-color:var(--orange);background:#17150f}
+.downloads-main .dl-btn[href]:focus-visible{outline-color:rgba(112,242,164,.86);outline-offset:4px}
 .manual-home-link{margin:24px 0 0;color:#e7a43b;font-size:14px}
 @media(max-width:760px){.manual-section{grid-template-columns:1fr;gap:26px}.manual-cover{max-width:560px}.manual-section .licence-cta-actions{gap:18px}}
 
