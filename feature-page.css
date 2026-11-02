@@ -329,6 +329,12 @@
   height:2px;
   background:var(--orange);
 }
+.inspector-kicker{
+  color:#52BB72;
+}
+.inspector-kicker span{
+  background:#52BB72;
+}
 .product-heading{
   display:flex;
   align-items:center;
