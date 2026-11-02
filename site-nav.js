@@ -131,7 +131,14 @@
     });
   });
 
-  featuresTrigger.addEventListener("click", function () {
+  featuresTrigger.addEventListener("click", function (event) {
+    /* A desktop pointer opens the menu on hover before the click arrives.
+       Keep that menu open instead of immediately toggling it shut. Keyboard
+       activation (detail 0) and touch retain the expected toggle behaviour. */
+    if (hoverQuery.matches && event.detail !== 0) {
+      openFeatures();
+      return;
+    }
     if (featuresNav.classList.contains("is-open")) {
       closeFeatures(false);
     } else {
