@@ -188,10 +188,10 @@
 }
 .kineplex-page .feature-stage{
   height:auto;
-  aspect-ratio:3 / 1;
+  aspect-ratio:2.9 / 1;
   background-image:url("/assets/kineplex-header.webp");
-  background-position:center;
-  background-size:100% 100%;
+  background-position:center bottom;
+  background-size:100% auto;
 }
 .flexcam-page .feature-stage{
   height:auto;
