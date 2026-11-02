@@ -45,6 +45,21 @@
   var primaryNav = featuresNav.parentElement;
   var featuresMenuLinks = document.querySelectorAll('.features-menu a');
   var hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+  var closeTimer = null;
+
+  function cancelScheduledClose() {
+    if (closeTimer !== null) {
+      window.clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+  }
+
+  function scheduleClose() {
+    cancelScheduledClose();
+    closeTimer = window.setTimeout(function () {
+      closeFeatures(false);
+    }, 160);
+  }
 
   function previewNavItem(item) {
     links.forEach(function (link) {
@@ -77,11 +92,15 @@
 
     setActive(featureIsActive ? "features" : activePage);
     featuresMenuLinks.forEach(function (link) {
-      link.classList.toggle("active", link.getAttribute("href") === featurePath);
+      var isCurrentFeature = link.getAttribute("href") === featurePath;
+      link.classList.remove("active");
+      if (isCurrentFeature) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
   }
 
   function openFeatures() {
+    cancelScheduledClose();
     previewNavItem(featuresTrigger);
     primaryNav.classList.add("features-menu-open");
     featuresNav.classList.add("is-open");
@@ -89,6 +108,7 @@
   }
 
   function closeFeatures(returnFocus) {
+    cancelScheduledClose();
     if (returnFocus) featuresTrigger.focus();
     primaryNav.classList.remove("features-menu-open");
     featuresNav.classList.remove("is-open");
@@ -127,11 +147,14 @@
     }
   });
 
-  featuresNav.addEventListener("mouseenter", function () {
-    if (hoverQuery.matches) openFeatures();
+  featuresNav.addEventListener("pointerenter", function () {
+    if (hoverQuery.matches) {
+      cancelScheduledClose();
+      openFeatures();
+    }
   });
-  featuresNav.addEventListener("mouseleave", function () {
-    if (hoverQuery.matches) closeFeatures(false);
+  featuresNav.addEventListener("pointerleave", function () {
+    if (hoverQuery.matches) scheduleClose();
   });
   featuresNav.addEventListener("focusin", function (event) {
     if (event.target !== featuresTrigger) openFeatures();
