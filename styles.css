@@ -659,7 +659,7 @@ nav > a.nav-shop:after,nav .nav-shop.nav-preview:after{display:none}
 .shop-button:focus-visible,.buy-note-link:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
 .downloads-main .shop-button{border-color:#52BB72;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease,color .2s ease}
 .downloads-main .shop-button:hover,.downloads-main .shop-button:focus-visible{border-color:#52BB72;background:#0c1810;color:#e7a43b;box-shadow:0 0 0 1px rgba(82,187,114,.26),0 0 14px rgba(82,187,114,.28),inset 0 0 16px rgba(82,187,114,.07);transform:none}
-.downloads-main .shop-button:active{border-color:#52BB72;background:#102116;box-shadow:0 0 0 1px rgba(82,187,114,.38),0 0 10px rgba(82,187,114,.32),inset 0 0 18px rgba(82,187,114,.12);transform:none}
+.downloads-main .shop-button:active{border-color:#52BB72;background:var(--orange);color:#0a0b0c;box-shadow:0 0 0 1px rgba(82,187,114,.32),0 0 10px rgba(82,187,114,.24);transform:none}
 .downloads-main .shop-button:focus-visible{outline:2px solid #52BB72;outline-offset:4px}
 .bundle-cta{margin-top:22px}
 .licence-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:20px}
