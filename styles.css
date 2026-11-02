@@ -608,7 +608,7 @@ footer{
 .bundle-summary a,.downloads-link{color:#e7a43b;text-decoration:underline;text-underline-offset:4px}
 .downloads-main{max-width:1100px;margin:0 auto;padding:0 48px 56px;color:#b6b9bc}
 .downloads-intro{padding:80px 0 48px;max-width:900px}
-.downloads-intro h1{margin:0;color:#e2e4e5;font-size:clamp(36px,5vw,60px);font-weight:450;line-height:1.12;letter-spacing:-.025em}
+.downloads-intro h1{margin:0;color:#fff;font-family:"Inter","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;font-size:clamp(36px,5vw,60px);font-weight:700;line-height:1.12;letter-spacing:-.025em}
 .downloads-main p,.activation-steps,.sponsor-tiers{font-size:16px;line-height:1.75}
 .downloads-main .downloads-lead{font-size:24px;color:#d5d7d9;margin-bottom:12px}
 .licence-panel{margin-top:32px;padding:25px 28px;background:linear-gradient(135deg,#151719,#080a0c);border:1px solid #34383b;border-left:2px solid var(--orange);border-radius:8px}
