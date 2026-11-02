@@ -44,6 +44,9 @@
   if (!featuresNav || !featuresTrigger) return;
   var primaryNav = featuresNav.parentElement;
   var featuresMenuLinks = document.querySelectorAll('.features-menu a');
+  featuresMenuLinks.forEach(function (link) {
+    if (link.getAttribute('href') === '/features/kineplex') link.textContent = 'Kineplex';
+  });
   var hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
   var closeTimer = null;
 
