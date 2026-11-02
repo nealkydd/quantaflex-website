@@ -333,7 +333,7 @@
   color:#52BB72;
 }
 .inspector-kicker span{
-  background:#52BB72;
+  display:none;
 }
 .product-heading{
   display:flex;
